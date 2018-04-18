@@ -10,7 +10,15 @@ switch ($numberPages) {
 
 
         break;
-    case 2:
+    case 2:include_once '../Model/Catalogues/CatalogueModel.php';
+
+
+        break;
+    case 3:include_once '../Model/Catalogues/Pages/PagesModel.php';
+
+
+        break;
+    case 4:include_once '../Model/Catalogues/Pages/Produits/ProduitsModel.php';
 
 
         break;

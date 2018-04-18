@@ -1,7 +1,7 @@
 <?php
-
+session_start();
 require_once '../View/Header.php';
-
+require_once '../Controller/database/DatabaseConnectionController.php';
 ?>
 
 <div class="row row-main">

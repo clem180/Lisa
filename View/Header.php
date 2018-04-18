@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 $title = "Accueil";
 
 ?>
@@ -11,7 +11,9 @@ $title = "Accueil";
         <meta charset="UTF-8">
         <title></title>
          <link href="../lib/css/bootstrap.min.css" rel="stylesheet">
-        <script href="../lib/jquery/jquery-3.3.1.min.js"></script>
+         <script type="text/javascript" src="../lib/jquery/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../lib/js/bootstrap.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -26,8 +28,9 @@ $title = "Accueil";
                 <a class="nav-link" href="../Model/MainModel.php?page=0">Acceuil </a>
             </li>
             <li class="nav-item active">
-            <a class="nav-link" href="#">Catalogues </a>
+            <a class="nav-link" href="../Model/MainModel.php?page=2">Catalogues </a>
             </li>      
+            
         </ul>   
     
   </div>

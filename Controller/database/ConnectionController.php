@@ -6,14 +6,15 @@
  */
 function connection($username, $password, $database){
     $connection = $database;
-    echo $username;
-    $verifyUsername = $connection->query("SELECT * FROM ENTITE WHERE Identifier = '".$username."'");
+    echo 'b';
+    $verifyUsername = $connection->query("SELECT Id FROM ENTITE WHERE Identifier = '".$username."' AND Password = '".$password."'");
     $verifyUsername->execute();
     
-    $verifyPassword = $connection->query("SELECT * FROM ENTITE WHERE Password = '".$password."'");
-    $verifyPassword->execute();
+    echo 'a';
     
-    $data = $verifyUsername->fetch(PDO::FETCH_ASSOC);
+    $data = $verifyUsername->rowCount();
+    
+    echo $data;
     if ($data != 0) {
         $_SESSION['user_password'] = $password;
         $_SESSION['user_username'] = $username;
