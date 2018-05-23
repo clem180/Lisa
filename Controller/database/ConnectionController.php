@@ -6,15 +6,15 @@
  */
 function connection($username, $password, $database){
     $connection = $database;
-    echo 'b';
+  
     $verifyUsername = $connection->query("SELECT Id FROM ENTITE WHERE Identifier = '".$username."' AND Password = '".$password."'");
     $verifyUsername->execute();
     
-    echo 'a';
+   
     
     $data = $verifyUsername->rowCount();
     
-    echo $data;
+    
     if ($data != 0) {
         $_SESSION['user_password'] = $password;
         $_SESSION['user_username'] = $username;
@@ -26,7 +26,7 @@ function connection($username, $password, $database){
 //Cette fonction permet de savoir si l'utilisateur est connecté ou non
 function isConnected(){
     //Cette fonction retourne True si S_SESSION['user_username'] et $_SESSION['user_password'] existent
-    if (isset(S_SESSION['user_username'], $_SESSION['user_password'])) {
+    if (isset($_SESSION['user_username'], $_SESSION['user_password'])) {
         return True;
     }
     else{

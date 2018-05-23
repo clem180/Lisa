@@ -14,7 +14,11 @@ $database = "LISA_DIGITAL";
 /**
  * Création de la connexion, si ça ne fonctionne pas, on affiche un avertissement
  */
+try{
 $connection = new PDO('sqlsrv:Server='.$host.';Database='.$database, $username, $password) or die("Connexion à la base de données impossible !");
-
+}
+ catch (Exception $e){
+echo $e;
+ }
 ?>
 

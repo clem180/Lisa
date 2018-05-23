@@ -16,7 +16,11 @@ function ListCatalogues($bdd){
                 $catalogues = $bdd->query('SELECT * FROM CATALOGUE WHERE Id='.$ce['CAT_Id']);
                 while ($catalogue = $catalogues->fetch())
                 {
-               
+                   
+                
+                    if (strtotime($ce['DisplayStartDate'])<=strtotime(date('Y-m-d')) && strtotime(date('Y-m-d'))<=strtotime($ce['DisplayEndDate'])) {
+                        
+                    
                  ?>
                         
                         <br/><br/>
@@ -25,7 +29,7 @@ function ListCatalogues($bdd){
                        
                     
                  <?php
-                              
+                    }     
                 }  
             }
         }

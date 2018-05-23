@@ -1,2 +1,7 @@
 <?php
-ListProduits($connection);
+
+    ListProduits($connection);
+
+    
+
+

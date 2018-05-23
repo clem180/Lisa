@@ -16,9 +16,25 @@ switch ($numberPages) {
         break;
     case 3:include_once '../Model/Catalogues/Pages/PagesModel.php';
 
-
         break;
     case 4:include_once '../Model/Catalogues/Pages/Produits/ProduitsModel.php';
+
+
+        break;
+    case 5:include_once '../Model/Categorie/CategorieModel.php';
+
+
+        break;
+    
+    case 6:include_once '../Model/Catalogues/Pages/Produits/ProduitsModel.php';
+
+
+        break;
+    case 7:include_once '../Model/Categorie/Produit/ProduitsModel.php';
+
+
+        break;
+    case 8:include_once '../Model/produitRecherche/produitRecherche.php';
 
 
         break;
